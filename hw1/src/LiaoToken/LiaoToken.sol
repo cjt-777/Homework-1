@@ -61,19 +61,19 @@ contract LiaoToken is IERC20 {
 
     function transfer(address to, uint256 amount) external returns (bool) {
         // TODO: please add your implementaiton here
-            _balances[msg.sender] -= amount;
-            _balances[to] += amount;
-            emit Transfer(msg.sender, to, amount);
-            return true;
+        _balances[msg.sender] -= amount;
+        _balances[to] += amount;
+        emit Transfer(msg.sender, to, amount);
+        return true;
     }
 
     function transferFrom(address from, address to, uint256 value) external returns (bool) {
         // TODO: please add your implementaiton here
-            _balances[to] += value;
-            _balances[from] -= value;
-            allowed[from][msg.sender] -= value;
-            emit Transfer(from, to, value);
-            return true;
+        _balances[to] += value;
+        _balances[from] -= value;
+        allowed[from][msg.sender] -= value;
+        emit Transfer(from, to, value);
+        return true;
     }
 
     function approve(address spender, uint256 amount) external returns (bool) {
