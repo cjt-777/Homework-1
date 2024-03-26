@@ -66,9 +66,6 @@ contract LiaoToken is IERC20 {
             _balances[to] += amount;
             emit Transfer(msg.sender, to, amount);
             return true;
-        } 
-        else {
-            return false;
         }
     }
 
@@ -80,9 +77,6 @@ contract LiaoToken is IERC20 {
             allowed[from][msg.sender] -= value;
             emit Transfer(from, to, value);
             return true;
-        }
-        else {
-            return false;
         }
     }
 
