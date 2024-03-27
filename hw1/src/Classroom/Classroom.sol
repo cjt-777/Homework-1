@@ -6,11 +6,7 @@ contract StudentV1 {
     // Note: You can declare some state variable
     mapping(address => bool) public registeredUsers;
     uint256 public totalRegisteredUsers;
-    
-    // Constructor
-    constructor() {
-        totalRegisteredUsers = 0;
-    }
+
     event UserRegistered(address indexed user);
     function register() external returns (uint256) {
         // TODO: please add your implementaiton here
